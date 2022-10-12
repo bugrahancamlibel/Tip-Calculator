@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <TextView
         android:id="@+id/tvBaseLabel"
         android:layout_width="wrap_content"
@@ -22,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/tvBaseLabel"
+        app:layout_constraintEnd_toEndOf="@+id/tvBaseLabel"
         app:layout_constraintTop_toBottomOf="@+id/tvBaseLabel"
         tools:text="%24" />
 
@@ -32,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
         android:text="Tip"
-        app:layout_constraintEnd_toEndOf="@id/tvBaseLabel"
+        app:layout_constraintEnd_toEndOf="@+id/tvTipPercentLabel"
         app:layout_constraintTop_toBottomOf="@+id/tvTipPercentLabel" />
 
     <TextView
@@ -41,14 +42,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Total"
-        app:layout_constraintEnd_toEndOf="@id/tvBaseLabel"
+        app:layout_constraintEnd_toEndOf="@+id/tvTipLabel"
         app:layout_constraintTop_toBottomOf="@+id/tvTipLabel" />
 
     <EditText
         android:id="@+id/etBaseAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="50dp"
         android:ems="8"
         android:hint="Bill amount"
         android:inputType="numberDecimal"
@@ -107,5 +108,34 @@
         app:layout_constraintStart_toStartOf="@+id/seekBarTip"
         app:layout_constraintTop_toBottomOf="@+id/seekBarTip"
         tools:text="great" />
+
+    <TextView
+        android:id="@+id/tvPeopleCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="People"
+        app:layout_constraintEnd_toEndOf="@+id/tvTotalLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalLabel" />
+
+    <EditText
+        android:id="@+id/etPeopleAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="1 as default"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPeopleCount"
+        app:layout_constraintStart_toStartOf="@+id/tvTotalAmount"
+        app:layout_constraintTop_toTopOf="@+id/tvPeopleCount" />
+
+    <TextView
+        android:id="@+id/tvPeopleAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="@id/etPeopleAmount"
+        app:layout_constraintTop_toBottomOf="@+id/etPeopleAmount"
+        tools:text="20 per person" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
